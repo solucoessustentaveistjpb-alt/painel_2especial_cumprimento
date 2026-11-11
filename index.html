@@ -497,7 +497,7 @@
               <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
                 <i data-lucide="search" class="text-amber-500 w-5 h-5"></i> Consultar Processo Único
               </h3>
-              <p class="text-slate-400 text-xs mb-4">Identifique automaticamente o dígito base, o servidor responsável e a respectiva equipe na Vara.</p>
+              <p class="text-slate-400 text-xs mb-4">Identifique automaticamente o subdígito, o servidor responsável e a respectiva equipe na Vara.</p>
               
               <div class="flex flex-col sm:flex-row gap-3">
                 <div class="relative flex-1">
@@ -577,7 +577,7 @@
                     <tr>
                       <th class="px-4 py-3 font-medium text-center w-12">Nº</th>
                       <th class="px-4 py-3 font-medium">Processo CNJ</th>
-                      <th class="px-4 py-3 font-medium text-center w-20">Dígito</th>
+                      <th class="px-4 py-3 font-medium text-center w-20">Subdígito</th>
                       <th class="px-4 py-3 font-medium text-white">Servidor(a)</th>
                       <th class="px-4 py-3 font-medium">Equipe</th>
                     </tr>
@@ -733,7 +733,7 @@
               <i class="ph-fill ph-database text-blue-400 mr-2 text-xl"></i> 1. Importação do Relatório PJe
             </h2>
             <p class="text-sm text-slate-400 mb-4">
-              Cole os dados da sua planilha na caixa abaixo <strong>OU</strong> utilize o botão <strong>"Importar Planilha"</strong>. O sistema extrairá automaticamente as tarefas, datas e dígitos (7º dígito).
+              Cole os dados da sua planilha na caixa abaixo <strong>OU</strong> utilize o botão <strong>"Importar Planilha"</strong>. O sistema extrairá automaticamente as tarefas, datas e subdígitos (2 dígitos antes do primeiro hífen).
             </p>
             
             <textarea id="data-input" class="w-full h-32 bg-slate-950 border border-slate-700 rounded-xl p-4 text-sm text-slate-200 font-mono focus:border-blue-500 outline-none custom-scrollbar whitespace-pre" placeholder="Cole os dados copiados do Excel aqui (separados por tabulação)..."></textarea>
@@ -1030,22 +1030,22 @@
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl">
             <div>
               <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Manual do Painel Único TJPB</h3>
-              <p class="text-xs md:text-sm text-slate-400">Regras de negócio, cálculo de dígito base (7º dígito) e rotinas de distribuição dos processos.</p>
+              <p class="text-xs md:text-sm text-slate-400">Regras de negócio, cálculo do subdígito (2 dígitos) e rotinas de distribuição dos processos.</p>
             </div>
 
             <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs md:text-sm text-center">
-              000000<span class="text-amber-400 font-bold underline text-lg">4</span>-44.2024.8.15.0001 &rarr; Dígito: <strong class="text-amber-400">4</strong> (Servidora ZENILDA)
+              00000<span class="text-amber-400 font-bold underline text-lg">01</span>-11.2011.8.15.0291 &rarr; Subdígito: <strong class="text-amber-400">01</strong> (Servidora ZENILDA)
             </div>
             
-            <p class="text-xs text-slate-400 text-center mt-2">O dígito utilizado é o 7º dígito da numeração única do CNJ (imediatamente antes do primeiro hífen).</p>
+            <p class="text-xs text-slate-400 text-center mt-2">O subdígito utilizado são os dois últimos dígitos do número sequencial da numeração única do CNJ (6ª e 7ª posições, imediatamente antes do primeiro hífen), de 00 a 99.</p>
           </div>
 
-          <!-- NOVA TABELA DE DÍGITOS -->
+          <!-- NOVA TABELA DE SUBDÍGITOS -->
           <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-800 pb-4 mb-4">
               <h3 class="text-lg md:text-xl font-bold text-white flex items-center gap-2">
                 <i class="ph-fill ph-stack text-amber-500 text-2xl"></i>
-                <span class="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-lg">Tabela Oficial de Dígitos (0-9)</span>
+                <span class="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-lg">Tabela Oficial de Subdígitos (00-99)</span>
               </h3>
             </div>
             
@@ -1061,14 +1061,27 @@
                   <span class="font-bold text-amber-500 uppercase tracking-wider text-sm">EQUIPE EDILAERTE</span>
                   <span class="font-bold text-slate-500 text-[10px] uppercase tracking-wider">COORDENAÇÃO</span>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-medium">
-                  <div class="flex justify-between items-center"><span class="text-slate-300">DEUSDETE:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">0, 1</span></div>
-                  <div class="flex justify-between items-center"><span class="text-slate-300">ANA CRISTINA:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">2</span></div>
-                  <div class="flex justify-between items-center"><span class="text-slate-300">VILMA:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">3</span></div>
-                  <div class="flex justify-between items-center"><span class="text-slate-300">ZENILDA:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">4</span></div>
-                  <div class="flex justify-between items-center"><span class="text-slate-300">AVANY:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">5, 8</span></div>
-                  <div class="flex justify-between items-center"><span class="text-slate-300">VERÔNICA:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">6</span></div>
-                  <div class="flex justify-between items-center"><span class="text-slate-300">DIANA:</span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded">7, 9</span></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-sm font-medium">
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">INALDO:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">02, 20, 23</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JANAYNA:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">80, 83, 87</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANTONIO REGINALDO:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">34, 57, 67</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JOÃO EDUARDO:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">17, 30, 77</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">SIMON:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">21, 72, 76</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JOSÉ ALBERTO:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">08, 13, 33, 47, 48, 58</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANDERSON:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">26, 28, 32, 84, 89, 98</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">MARIANA:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">06, 07, 15, 38, 49, 92</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ROSÂNGELA:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">19, 37, 62, 74, 93, 96</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANA CRISTINA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 4 horas</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">42, 53, 69, 90</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">CLEÓPATRA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">16, 51, 52, 91, 94</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">RONALDO:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">04, 24, 27, 36, 59</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">AVANY:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">05, 44, 55, 75, 78, 85</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ZENILDA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">01, 39, 43, 63, 71</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">DEUSDETE:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">00, 22, 29, 31, 60, 95</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">DIANA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">03, 25, 41, 50, 66, 79</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">VERÔNICA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">12, 14, 46, 56, 86, 99</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">VILMA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">10, 45, 64, 68, 81, 97</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">HAMILTON:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">11, 40, 54, 70, 73, 82</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">MARIA DAS NEVES:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">09, 18, 35, 61, 65, 88</span></div>
                 </div>
               </div>
 
@@ -1123,24 +1136,115 @@
   <div id="toast-container" class="fixed bottom-4 right-4 z-[210] flex flex-col gap-2"></div>
 
   <script>
-    // BASE OFICIAL DE DÍGITOS E CHEFIAS (2ª VCS)
+    // BASE OFICIAL DE SUBDÍGITOS (00-99) E CHEFIAS (2ª VCS)
     const PROD_CHEFIAS = ["EDILAERTE"];
     
     const PROD_EQUIPES = {
-      "EDILAERTE": ["DEUSDETE", "ANA CRISTINA", "VILMA", "ZENILDA", "AVANY", "VERÔNICA", "DIANA"]
+      "EDILAERTE": ["INALDO", "JANAYNA", "ANTONIO REGINALDO", "JOÃO EDUARDO", "SIMON", "JOSÉ ALBERTO", "ANDERSON", "MARIANA", "ROSÂNGELA", "ANA CRISTINA", "CLEÓPATRA", "RONALDO", "AVANY", "ZENILDA", "DEUSDETE", "DIANA", "VERÔNICA", "VILMA", "HAMILTON", "MARIA DAS NEVES"]
     };
 
+    // Subdígito = dois últimos dígitos do número sequencial (NNNNNNN), imediatamente antes do primeiro hífen
     const DB_DIGITOS = {
-      '0': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '1': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '2': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
-      '3': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '4': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
-      '5': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '8': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '6': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
-      '7': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '9': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' }
+      '00': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
+      '01': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
+      '02': { servidor: 'INALDO', equipe: 'EQUIPE EDILAERTE' },
+      '03': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
+      '04': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
+      '05': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
+      '06': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
+      '07': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
+      '08': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
+      '09': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
+      '10': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
+      '11': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
+      '12': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
+      '13': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
+      '14': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
+      '15': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
+      '16': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
+      '17': { servidor: 'JOÃO EDUARDO', equipe: 'EQUIPE EDILAERTE' },
+      '18': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
+      '19': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
+      '20': { servidor: 'INALDO', equipe: 'EQUIPE EDILAERTE' },
+      '21': { servidor: 'SIMON', equipe: 'EQUIPE EDILAERTE' },
+      '22': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
+      '23': { servidor: 'INALDO', equipe: 'EQUIPE EDILAERTE' },
+      '24': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
+      '25': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
+      '26': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
+      '27': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
+      '28': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
+      '29': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
+      '30': { servidor: 'JOÃO EDUARDO', equipe: 'EQUIPE EDILAERTE' },
+      '31': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
+      '32': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
+      '33': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
+      '34': { servidor: 'ANTONIO REGINALDO', equipe: 'EQUIPE EDILAERTE' },
+      '35': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
+      '36': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
+      '37': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
+      '38': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
+      '39': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
+      '40': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
+      '41': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
+      '42': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
+      '43': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
+      '44': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
+      '45': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
+      '46': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
+      '47': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
+      '48': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
+      '49': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
+      '50': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
+      '51': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
+      '52': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
+      '53': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
+      '54': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
+      '55': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
+      '56': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
+      '57': { servidor: 'ANTONIO REGINALDO', equipe: 'EQUIPE EDILAERTE' },
+      '58': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
+      '59': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
+      '60': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
+      '61': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
+      '62': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
+      '63': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
+      '64': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
+      '65': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
+      '66': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
+      '67': { servidor: 'ANTONIO REGINALDO', equipe: 'EQUIPE EDILAERTE' },
+      '68': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
+      '69': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
+      '70': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
+      '71': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
+      '72': { servidor: 'SIMON', equipe: 'EQUIPE EDILAERTE' },
+      '73': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
+      '74': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
+      '75': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
+      '76': { servidor: 'SIMON', equipe: 'EQUIPE EDILAERTE' },
+      '77': { servidor: 'JOÃO EDUARDO', equipe: 'EQUIPE EDILAERTE' },
+      '78': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
+      '79': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
+      '80': { servidor: 'JANAYNA', equipe: 'EQUIPE EDILAERTE' },
+      '81': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
+      '82': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
+      '83': { servidor: 'JANAYNA', equipe: 'EQUIPE EDILAERTE' },
+      '84': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
+      '85': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
+      '86': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
+      '87': { servidor: 'JANAYNA', equipe: 'EQUIPE EDILAERTE' },
+      '88': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
+      '89': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
+      '90': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
+      '91': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
+      '92': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
+      '93': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
+      '94': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
+      '95': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
+      '96': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
+      '97': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
+      '98': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
+      '99': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' }
     };
 
     const PROD_MAPA_DIGITOS = {};
@@ -1162,22 +1266,6 @@
     let modalProcessesCache = [];
     let modalActiveCategory = 'cump';
     let chartRetencaoInst = null;
-    let localDB = null;
-
-    // Inicialização do banco local para salvar as sessões
-    (function initLocalDB() {
-      try {
-        const req = indexedDB.open('GestorCivelDB', 1);
-        req.onupgradeneeded = (e) => {
-          if (!e.target.result.objectStoreNames.contains('distribuicoes')) {
-            e.target.result.createObjectStore('distribuicoes', { keyPath: 'id' });
-          }
-        };
-        req.onsuccess = (e) => { localDB = e.target.result; };
-      } catch (err) {
-        console.warn("IndexedDB indisponível. Salvamento desativado.", err);
-      }
-    })();
 
     function formatDateFullBR(d) {
       if (!(d instanceof Date) || isNaN(d.getTime())) return '';
@@ -1397,10 +1485,13 @@
       return `${p.substring(0,7)}-${p.substring(7,9)}.${p.substring(9,13)}.${p.substring(13,14)}.${p.substring(14,16)}.${p.substring(16,20)}`;
     }
 
-    // NOVA FUNÇÃO para extrair apenas o dígito base (7º dígito da numeração CNJ)
+    // Extrai o subdígito (2 dígitos): 6ª e 7ª posições do número sequencial CNJ (imediatamente antes do primeiro hífen)
+    // Ex.: 0000001-11.2011.8.15.0751 -> "01"
     function extractDigito(processoStr) {
-      const digits = String(processoStr || '').replace(/\D/g, '');
-      if (digits.length === 20) return digits.substring(6, 7);
+      let digits = String(processoStr || '').replace(/\D/g, '');
+      // Planilhas podem remover zeros à esquerda: completa até 20 dígitos
+      if (digits.length >= 14 && digits.length < 20) digits = digits.padStart(20, '0');
+      if (digits.length === 20) return digits.substring(5, 7);
       return null;
     }
 
@@ -1448,7 +1539,7 @@
           <div class="text-lg font-mono font-bold text-white mb-4 select-all">${pVisual}</div>
           <div class="grid grid-cols-2 gap-3 mb-3 text-xs">
             <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
-              <span class="text-slate-500 block mb-1">Dígito (7º dígito)</span>
+              <span class="text-slate-500 block mb-1">Subdígito</span>
               <strong class="text-2xl text-amber-500 font-mono">${info.digito}</strong>
             </div>
             <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
@@ -1665,7 +1756,7 @@
           servidor = PROD_MAPA_DIGITOS[dig];
           chefia = PROD_CHEFIA_POR_SERVIDOR[servidor] || 'SEM CHEFIA';
         } else {
-          errors.push(`Processo ${processo} (Dígito ${dig || 'inválido'}) - Sem servidor correspondente.`);
+          errors.push(`Processo ${processo} (Subdígito ${dig || 'inválido'}) - Sem servidor correspondente.`);
         }
 
         const dataMovRaw = colDataMov !== -1 ? (cols[colDataMov] || "").trim() : "";
@@ -1925,7 +2016,7 @@
                   <a href="${pjeLinkBase}" target="_blank" onclick="navigator.clipboard.writeText('${p.processo}')" class="${txtClass} text-[11px] block truncate w-32">
                     ${p.processo}
                   </a>
-                  <span class="text-[9px] text-slate-500">Díg: ${p.digito}</span>
+                  <span class="text-[9px] text-slate-500">Subdíg: ${p.digito}</span>
                 </td>
                 <td class="px-1 py-2 text-center">${tempoExibir}</td>
                 <td class="px-2 py-2">${tarefaExibir}</td>
@@ -2343,7 +2434,7 @@
       if (sProcs.length === 0) return showToast("Nenhum processo para este servidor.", "warning");
       
       // Cabeçalho da planilha
-      const headers = ["Processo", "Dígito", "Servidor", "Equipe", "Tempo (Dias)", "Última Tarefa"];
+      const headers = ["Processo", "Subdígito", "Servidor", "Equipe", "Tempo (Dias)", "Última Tarefa"];
       
       // Mapeamento das linhas
       const rows = sProcs.map(p => [
@@ -2362,7 +2453,7 @@
       // Ajuste de largura das colunas
       ws['!cols'] = [
         {wch: 25}, // Processo
-        {wch: 10}, // Dígito
+        {wch: 10}, // Subdígito
         {wch: 20}, // Servidor
         {wch: 20}, // Equipe
         {wch: 15}, // Tempo (Dias)
@@ -2386,7 +2477,7 @@
       const teamProcesses = processedData.filter(p => teamServers.includes(p.servidor));
       if (teamProcesses.length === 0) return showToast(`Não há processos para a Equipe ${chefia}.`, "warning");
 
-      const headers = ["Processo", "Dígito", "Servidor", "Equipe", "Tempo (Dias)", "Última Tarefa", "Status (Comparação)"];
+      const headers = ["Processo", "Subdígito", "Servidor", "Equipe", "Tempo (Dias)", "Última Tarefa", "Status (Comparação)"];
       const colsConfig = [{wch: 25}, {wch: 10}, {wch: 20}, {wch: 20}, {wch: 15}, {wch: 45}, {wch: 20}];
       
       const wb = XLSX.utils.book_new();
@@ -2442,59 +2533,6 @@
       XLSX.writeFile(wb, nomeArq, { bookType: format === 'csv' ? 'csv' : 'xlsx' });
       showToast(`Tabelas exportadas com sucesso!`, "success");
     };
-
-    function formatDateID(d) {
-      if (!(d instanceof Date) || isNaN(d.getTime())) return '';
-      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    }
-
-    function clearScreenState() {
-      processedData = [];
-      rawDataCount = 0;
-      lastErrors = [];
-      compareMap.clear();
-      
-      document.getElementById('data-input').value = '';
-      document.getElementById('section-dashboard').classList.add('hidden');
-      
-      const compareSummary = document.getElementById('compare-summary');
-      if (compareSummary) compareSummary.classList.add('hidden');
-      
-      const errorLog = document.getElementById('error-log');
-      if (errorLog) errorLog.classList.add('hidden');
-      
-      if (window.myPieChart) {
-        window.myPieChart.destroy();
-        window.myPieChart = null;
-      }
-    }
-
-    document.getElementById('btn-clear-screen')?.addEventListener('click', () => {
-      clearScreenState();
-      showToast("Tela limpa! Dados resetados.", "info");
-    });
-
-    document.getElementById('btn-save-date')?.addEventListener('click', () => {
-      if (!processedData || processedData.length === 0) return showToast("Não há dados para salvar.", "warning");
-      if (!localDB) return showToast("Armazenamento local inativo no seu navegador.", "error");
-      
-      const sessid = formatDateID(selectedDate);
-      const deadlineVal = document.getElementById('select-deadline')?.value || '30';
-      
-      const payload = {
-        id: sessid,
-        data: JSON.stringify(processedData),
-        compareData: JSON.stringify(Array.from(compareMap.entries())),
-        count: processedData.length,
-        deadline: deadlineVal,
-        savedAt: new Date().toISOString()
-      };
-      
-      const tx = localDB.transaction('distribuicoes', 'readwrite');
-      tx.objectStore('distribuicoes').put(payload);
-      tx.oncomplete = () => showToast(`Sessão de ${formatDateFullBR(selectedDate)} salva no histórico local!`, "success");
-      tx.onerror = () => showToast("Falha ao salvar sessão.", "error");
-    });
 
     window.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) window.lucide.createIcons();
