@@ -604,7 +604,9 @@
                     <a href="tel:+5583988331869" class="text-sky-400 hover:text-sky-300 hover:underline">Ligar (83) 98833-1869</a>
                   </div>
                 </div>
-                <i data-lucide="message-circle" class="w-4 h-4 text-slate-500 shrink-0 mt-1"></i>
+                <button type="button" onclick="baixarPlanilhaEquipe('INALDO', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm mt-1" title="Baixar planilha da equipe">
+                  <i class="ph-bold ph-file-xls text-lg"></i>
+                </button>
               </div>
               <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl flex items-start justify-between gap-3">
                 <div>
@@ -615,7 +617,9 @@
                     <a href="tel:+558398039523" class="text-sky-400 hover:text-sky-300 hover:underline">Ligar (83) 9803-9523</a>
                   </div>
                 </div>
-                <i data-lucide="message-circle" class="w-4 h-4 text-slate-500 shrink-0 mt-1"></i>
+                <button type="button" onclick="baixarPlanilhaEquipe('JANAYNA', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm mt-1" title="Baixar planilha da equipe">
+                  <i class="ph-bold ph-file-xls text-lg"></i>
+                </button>
               </div>
             </div>
           </section>
@@ -1223,38 +1227,47 @@
               </h3>
             </div>
             
-            <p class="text-sm text-slate-400 leading-relaxed mb-6">
-              Esta é a nova configuração estrutural da 2ª Vara Especializada de Cumprimento de Sentença, com equipe unificada sob a coordenação de Edilaerte.
+            <p class="text-sm text-slate-400 leading-relaxed mb-2">
+              A 2ª Vara Especializada de Cumprimento de Sentença está organizada em duas equipes, sob a coordenação de Edilaerte.
             </p>
+            <p class="text-sm text-amber-400/90 font-semibold mb-6">Coordenador: EDILAERTE</p>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
               
-              <!-- EQUIPE UNICA -->
-              <div class="bg-slate-950 border border-slate-800 rounded-2xl p-5 shadow-inner col-span-1 lg:col-span-2">
-                <div class="flex justify-between items-center border-b border-slate-800/80 pb-3 mb-3">
-                  <span class="font-bold text-amber-500 uppercase tracking-wider text-sm">EQUIPE EDILAERTE</span>
-                  <span class="font-bold text-slate-500 text-[10px] uppercase tracking-wider">COORDENAÇÃO</span>
+              <div class="bg-slate-950 border border-slate-800 rounded-2xl p-5 shadow-inner">
+                <div class="flex justify-between items-center border-b border-slate-800/80 pb-3 mb-3 gap-2">
+                  <span class="font-bold text-amber-500 uppercase tracking-wider text-sm">EQUIPE INALDO</span>
+                  <button type="button" onclick="baixarPlanilhaEquipe('INALDO', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm" title="Baixar planilha da equipe"><i class="ph-bold ph-file-xls text-base"></i></button>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-sm font-medium">
-                  <div class="flex justify-between items-start gap-3"><span class="text-slate-300">INALDO <span class="ml-1 inline-flex align-middle px-1.5 py-0.5 text-[9px] uppercase font-bold tracking-wide bg-amber-500/15 text-amber-400 border border-amber-500/20 rounded">Chefe Adjunto</span><span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span><span class="block mt-1 text-[10px] font-normal"><a href="https://wa.me/5583988331869" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 hover:underline">WhatsApp (83) 98833-1869</a><span class="text-slate-600 mx-1">·</span><a href="tel:+5583988331869" class="text-sky-400 hover:text-sky-300 hover:underline">(83) 98833-1869</a></span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">02, 20, 23</span></div>
-                  <div class="flex justify-between items-start gap-3"><span class="text-slate-300">JANAYNA <span class="ml-1 inline-flex align-middle px-1.5 py-0.5 text-[9px] uppercase font-bold tracking-wide bg-amber-500/15 text-amber-400 border border-amber-500/20 rounded">Chefe Adjunto</span><span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span><span class="block mt-1 text-[10px] font-normal"><a href="https://wa.me/558398039523" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 hover:underline">WhatsApp (83) 9803-9523</a><span class="text-slate-600 mx-1">·</span><a href="tel:+558398039523" class="text-sky-400 hover:text-sky-300 hover:underline">(83) 9803-9523</a></span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">80, 83, 87</span></div>
+                <div class="grid grid-cols-1 gap-y-3 text-sm font-medium">
+                  <div class="flex justify-between items-start gap-3"><span class="text-slate-300 flex-1">INALDO <span class="ml-1 inline-flex align-middle px-1.5 py-0.5 text-[9px] uppercase font-bold tracking-wide bg-amber-500/15 text-amber-400 border border-amber-500/20 rounded">Chefe Adjunto</span> <button type="button" onclick="baixarPlanilhaEquipe('INALDO', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm" title="Baixar planilha da equipe"><i class="ph-bold ph-file-xls text-base"></i></button><span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span><span class="block mt-1 text-[10px] font-normal"><a href="https://wa.me/5583988331869" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 hover:underline">WhatsApp (83) 98833-1869</a><span class="text-slate-600 mx-1">·</span><a href="tel:+5583988331869" class="text-sky-400 hover:text-sky-300 hover:underline">(83) 98833-1869</a></span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">02, 20, 23</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANTONIO REGINALDO:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">34, 57, 67</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JOÃO EDUARDO:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">17, 30, 77</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">SIMON:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">21, 72, 76</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JOSÉ ALBERTO:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">08, 13, 33, 47, 48, 58</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANDERSON:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">26, 28, 32, 84, 89, 98</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">MARIANA:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">06, 07, 15, 38, 49, 92</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ROSÂNGELA:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">19, 37, 62, 74, 93, 96</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANA CRISTINA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 4 horas</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">42, 53, 69, 90</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ROSÂNGELA RUFFO:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">19, 37, 62, 74, 93, 96</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">CLEÓPATRA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">16, 51, 52, 91, 94</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">RONALDO:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">04, 24, 27, 36, 59</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">AVANY:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">05, 44, 55, 75, 78, 85</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ZENILDA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">01, 39, 43, 63, 71</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">DEUSDETE:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">00, 22, 29, 31, 60, 95</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">DIANA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">03, 25, 41, 50, 66, 79</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">VERÔNICA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">12, 14, 46, 56, 86, 99</span></div>
-                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">VILMA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">10, 45, 64, 68, 81, 97</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">HAMILTON:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">11, 40, 54, 70, 73, 82</span></div>
+                </div>
+              </div>
+
+              <div class="bg-slate-950 border border-slate-800 rounded-2xl p-5 shadow-inner">
+                <div class="flex justify-between items-center border-b border-slate-800/80 pb-3 mb-3 gap-2">
+                  <span class="font-bold text-amber-500 uppercase tracking-wider text-sm">EQUIPE JANAYNA</span>
+                  <button type="button" onclick="baixarPlanilhaEquipe('JANAYNA', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm" title="Baixar planilha da equipe"><i class="ph-bold ph-file-xls text-base"></i></button>
+                </div>
+                <div class="grid grid-cols-1 gap-y-3 text-sm font-medium">
+                  <div class="flex justify-between items-start gap-3"><span class="text-slate-300 flex-1">JANAYNA <span class="ml-1 inline-flex align-middle px-1.5 py-0.5 text-[9px] uppercase font-bold tracking-wide bg-amber-500/15 text-amber-400 border border-amber-500/20 rounded">Chefe Adjunto</span> <button type="button" onclick="baixarPlanilhaEquipe('JANAYNA', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm" title="Baixar planilha da equipe"><i class="ph-bold ph-file-xls text-base"></i></button><span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span><span class="block mt-1 text-[10px] font-normal"><a href="https://wa.me/558398039523" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 hover:underline">WhatsApp (83) 9803-9523</a><span class="text-slate-600 mx-1">·</span><a href="tel:+558398039523" class="text-sky-400 hover:text-sky-300 hover:underline">(83) 9803-9523</a></span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">80, 83, 87</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JOÃO EDUARDO:<span class="block text-[10px] text-slate-500 font-normal">Atendimento de balcão – 3 subdígitos</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">17, 30, 77</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">JOSÉ ALBERTO:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">08, 13, 33, 47, 48, 58</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">MARIANA:<span class="block text-[10px] text-slate-500 font-normal">Teletrabalho integral – carga superior nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">06, 07, 15, 38, 49, 92</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ANA CRISTINA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 4 horas</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">42, 53, 69, 90</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">RONALDO:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">04, 24, 27, 36, 59</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">ZENILDA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">01, 39, 43, 63, 71</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">DIANA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">03, 25, 41, 50, 66, 79</span></div>
+                  <div class="flex justify-between items-center gap-3"><span class="text-slate-300">VILMA:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">10, 45, 64, 68, 81, 97</span></div>
                   <div class="flex justify-between items-center gap-3"><span class="text-slate-300">MARIA DAS NEVES:<span class="block text-[10px] text-slate-500 font-normal">Jornada de 6 horas – carga reduzida nesta revisão</span></span><span class="font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded text-right shrink-0">09, 18, 35, 61, 65, 88</span></div>
                 </div>
               </div>
@@ -1311,128 +1324,135 @@
 
   <script>
     // BASE OFICIAL DE SUBDÍGITOS (00-99) E CHEFIAS (2ª VCS)
-    const PROD_CHEFIAS = ["EDILAERTE"];
+    const PROD_CHEFIAS = ["INALDO", "JANAYNA"];
     
     const PROD_EQUIPES = {
-      "EDILAERTE": ["INALDO", "JANAYNA", "ANTONIO REGINALDO", "JOÃO EDUARDO", "SIMON", "JOSÉ ALBERTO", "ANDERSON", "MARIANA", "ROSÂNGELA", "ANA CRISTINA", "CLEÓPATRA", "RONALDO", "AVANY", "ZENILDA", "DEUSDETE", "DIANA", "VERÔNICA", "VILMA", "HAMILTON", "MARIA DAS NEVES"]
+      "INALDO": ["INALDO", "ANTONIO REGINALDO", "SIMON", "ANDERSON", "ROSÂNGELA", "CLEÓPATRA", "AVANY", "DEUSDETE", "VERÔNICA", "HAMILTON"],
+      "JANAYNA": ["JANAYNA", "JOÃO EDUARDO", "JOSÉ ALBERTO", "MARIANA", "ANA CRISTINA", "RONALDO", "ZENILDA", "DIANA", "VILMA", "MARIA DAS NEVES"]
     };
 
     // Subdígito = dois últimos dígitos do número sequencial (NNNNNNN), imediatamente antes do primeiro hífen
     const DB_DIGITOS = {
-      '00': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '01': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
-      '02': { servidor: 'INALDO', equipe: 'EQUIPE EDILAERTE' },
-      '03': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '04': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
-      '05': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '06': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
-      '07': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
-      '08': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
-      '09': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
-      '10': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '11': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
-      '12': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
-      '13': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
-      '14': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
-      '15': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
-      '16': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
-      '17': { servidor: 'JOÃO EDUARDO', equipe: 'EQUIPE EDILAERTE' },
-      '18': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
-      '19': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
-      '20': { servidor: 'INALDO', equipe: 'EQUIPE EDILAERTE' },
-      '21': { servidor: 'SIMON', equipe: 'EQUIPE EDILAERTE' },
-      '22': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '23': { servidor: 'INALDO', equipe: 'EQUIPE EDILAERTE' },
-      '24': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
-      '25': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '26': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
-      '27': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
-      '28': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
-      '29': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '30': { servidor: 'JOÃO EDUARDO', equipe: 'EQUIPE EDILAERTE' },
-      '31': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '32': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
-      '33': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
-      '34': { servidor: 'ANTONIO REGINALDO', equipe: 'EQUIPE EDILAERTE' },
-      '35': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
-      '36': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
-      '37': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
-      '38': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
-      '39': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
-      '40': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
-      '41': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '42': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
-      '43': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
-      '44': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '45': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '46': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
-      '47': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
-      '48': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
-      '49': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
-      '50': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '51': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
-      '52': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
-      '53': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
-      '54': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
-      '55': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '56': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
-      '57': { servidor: 'ANTONIO REGINALDO', equipe: 'EQUIPE EDILAERTE' },
-      '58': { servidor: 'JOSÉ ALBERTO', equipe: 'EQUIPE EDILAERTE' },
-      '59': { servidor: 'RONALDO', equipe: 'EQUIPE EDILAERTE' },
-      '60': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '61': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
-      '62': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
-      '63': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
-      '64': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '65': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
-      '66': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '67': { servidor: 'ANTONIO REGINALDO', equipe: 'EQUIPE EDILAERTE' },
-      '68': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '69': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
-      '70': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
-      '71': { servidor: 'ZENILDA', equipe: 'EQUIPE EDILAERTE' },
-      '72': { servidor: 'SIMON', equipe: 'EQUIPE EDILAERTE' },
-      '73': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
-      '74': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
-      '75': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '76': { servidor: 'SIMON', equipe: 'EQUIPE EDILAERTE' },
-      '77': { servidor: 'JOÃO EDUARDO', equipe: 'EQUIPE EDILAERTE' },
-      '78': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '79': { servidor: 'DIANA', equipe: 'EQUIPE EDILAERTE' },
-      '80': { servidor: 'JANAYNA', equipe: 'EQUIPE EDILAERTE' },
-      '81': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '82': { servidor: 'HAMILTON', equipe: 'EQUIPE EDILAERTE' },
-      '83': { servidor: 'JANAYNA', equipe: 'EQUIPE EDILAERTE' },
-      '84': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
-      '85': { servidor: 'AVANY', equipe: 'EQUIPE EDILAERTE' },
-      '86': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' },
-      '87': { servidor: 'JANAYNA', equipe: 'EQUIPE EDILAERTE' },
-      '88': { servidor: 'MARIA DAS NEVES', equipe: 'EQUIPE EDILAERTE' },
-      '89': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
-      '90': { servidor: 'ANA CRISTINA', equipe: 'EQUIPE EDILAERTE' },
-      '91': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
-      '92': { servidor: 'MARIANA', equipe: 'EQUIPE EDILAERTE' },
-      '93': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
-      '94': { servidor: 'CLEÓPATRA', equipe: 'EQUIPE EDILAERTE' },
-      '95': { servidor: 'DEUSDETE', equipe: 'EQUIPE EDILAERTE' },
-      '96': { servidor: 'ROSÂNGELA', equipe: 'EQUIPE EDILAERTE' },
-      '97': { servidor: 'VILMA', equipe: 'EQUIPE EDILAERTE' },
-      '98': { servidor: 'ANDERSON', equipe: 'EQUIPE EDILAERTE' },
-      '99': { servidor: 'VERÔNICA', equipe: 'EQUIPE EDILAERTE' }
+      '00': { servidor: 'DEUSDETE' },
+      '01': { servidor: 'ZENILDA' },
+      '02': { servidor: 'INALDO' },
+      '03': { servidor: 'DIANA' },
+      '04': { servidor: 'RONALDO' },
+      '05': { servidor: 'AVANY' },
+      '06': { servidor: 'MARIANA' },
+      '07': { servidor: 'MARIANA' },
+      '08': { servidor: 'JOSÉ ALBERTO' },
+      '09': { servidor: 'MARIA DAS NEVES' },
+      '10': { servidor: 'VILMA' },
+      '11': { servidor: 'HAMILTON' },
+      '12': { servidor: 'VERÔNICA' },
+      '13': { servidor: 'JOSÉ ALBERTO' },
+      '14': { servidor: 'VERÔNICA' },
+      '15': { servidor: 'MARIANA' },
+      '16': { servidor: 'CLEÓPATRA' },
+      '17': { servidor: 'JOÃO EDUARDO' },
+      '18': { servidor: 'MARIA DAS NEVES' },
+      '19': { servidor: 'ROSÂNGELA' },
+      '20': { servidor: 'INALDO' },
+      '21': { servidor: 'SIMON' },
+      '22': { servidor: 'DEUSDETE' },
+      '23': { servidor: 'INALDO' },
+      '24': { servidor: 'RONALDO' },
+      '25': { servidor: 'DIANA' },
+      '26': { servidor: 'ANDERSON' },
+      '27': { servidor: 'RONALDO' },
+      '28': { servidor: 'ANDERSON' },
+      '29': { servidor: 'DEUSDETE' },
+      '30': { servidor: 'JOÃO EDUARDO' },
+      '31': { servidor: 'DEUSDETE' },
+      '32': { servidor: 'ANDERSON' },
+      '33': { servidor: 'JOSÉ ALBERTO' },
+      '34': { servidor: 'ANTONIO REGINALDO' },
+      '35': { servidor: 'MARIA DAS NEVES' },
+      '36': { servidor: 'RONALDO' },
+      '37': { servidor: 'ROSÂNGELA' },
+      '38': { servidor: 'MARIANA' },
+      '39': { servidor: 'ZENILDA' },
+      '40': { servidor: 'HAMILTON' },
+      '41': { servidor: 'DIANA' },
+      '42': { servidor: 'ANA CRISTINA' },
+      '43': { servidor: 'ZENILDA' },
+      '44': { servidor: 'AVANY' },
+      '45': { servidor: 'VILMA' },
+      '46': { servidor: 'VERÔNICA' },
+      '47': { servidor: 'JOSÉ ALBERTO' },
+      '48': { servidor: 'JOSÉ ALBERTO' },
+      '49': { servidor: 'MARIANA' },
+      '50': { servidor: 'DIANA' },
+      '51': { servidor: 'CLEÓPATRA' },
+      '52': { servidor: 'CLEÓPATRA' },
+      '53': { servidor: 'ANA CRISTINA' },
+      '54': { servidor: 'HAMILTON' },
+      '55': { servidor: 'AVANY' },
+      '56': { servidor: 'VERÔNICA' },
+      '57': { servidor: 'ANTONIO REGINALDO' },
+      '58': { servidor: 'JOSÉ ALBERTO' },
+      '59': { servidor: 'RONALDO' },
+      '60': { servidor: 'DEUSDETE' },
+      '61': { servidor: 'MARIA DAS NEVES' },
+      '62': { servidor: 'ROSÂNGELA' },
+      '63': { servidor: 'ZENILDA' },
+      '64': { servidor: 'VILMA' },
+      '65': { servidor: 'MARIA DAS NEVES' },
+      '66': { servidor: 'DIANA' },
+      '67': { servidor: 'ANTONIO REGINALDO' },
+      '68': { servidor: 'VILMA' },
+      '69': { servidor: 'ANA CRISTINA' },
+      '70': { servidor: 'HAMILTON' },
+      '71': { servidor: 'ZENILDA' },
+      '72': { servidor: 'SIMON' },
+      '73': { servidor: 'HAMILTON' },
+      '74': { servidor: 'ROSÂNGELA' },
+      '75': { servidor: 'AVANY' },
+      '76': { servidor: 'SIMON' },
+      '77': { servidor: 'JOÃO EDUARDO' },
+      '78': { servidor: 'AVANY' },
+      '79': { servidor: 'DIANA' },
+      '80': { servidor: 'JANAYNA' },
+      '81': { servidor: 'VILMA' },
+      '82': { servidor: 'HAMILTON' },
+      '83': { servidor: 'JANAYNA' },
+      '84': { servidor: 'ANDERSON' },
+      '85': { servidor: 'AVANY' },
+      '86': { servidor: 'VERÔNICA' },
+      '87': { servidor: 'JANAYNA' },
+      '88': { servidor: 'MARIA DAS NEVES' },
+      '89': { servidor: 'ANDERSON' },
+      '90': { servidor: 'ANA CRISTINA' },
+      '91': { servidor: 'CLEÓPATRA' },
+      '92': { servidor: 'MARIANA' },
+      '93': { servidor: 'ROSÂNGELA' },
+      '94': { servidor: 'CLEÓPATRA' },
+      '95': { servidor: 'DEUSDETE' },
+      '96': { servidor: 'ROSÂNGELA' },
+      '97': { servidor: 'VILMA' },
+      '98': { servidor: 'ANDERSON' },
+      '99': { servidor: 'VERÔNICA' }
     };
 
     const PROD_MAPA_DIGITOS = {};
     const PROD_CHEFIA_POR_SERVIDOR = {};
-    for (const [dig, info] of Object.entries(DB_DIGITOS)) {
-      PROD_MAPA_DIGITOS[dig] = info.servidor;
-    }
     for (const [chefia, servidores] of Object.entries(PROD_EQUIPES)) {
       servidores.forEach(s => PROD_CHEFIA_POR_SERVIDOR[s] = chefia);
+    }
+    for (const [dig, info] of Object.entries(DB_DIGITOS)) {
+      PROD_MAPA_DIGITOS[dig] = info.servidor;
+      const chefia = PROD_CHEFIA_POR_SERVIDOR[info.servidor];
+      info.equipe = chefia ? ('EQUIPE ' + chefia) : 'A REGULARIZAR';
     }
 
     const CARGOS_SERVIDOR = {
       'INALDO': 'Chefe Adjunto',
       'JANAYNA': 'Chefe Adjunto'
+    };
+
+    const NOMES_EXIBICAO_SERVIDOR = {
+      'ROSÂNGELA': 'ROSÂNGELA RUFFO'
     };
 
     const CONTATOS_SERVIDOR = {
@@ -1456,15 +1476,34 @@
       }[ch]));
     }
 
+    function nomeExibicaoServidor(nome) {
+      return NOMES_EXIBICAO_SERVIDOR[nome] || nome || '';
+    }
+
     function rotuloServidor(nome) {
       if (!nome) return nome || '';
+      const base = nomeExibicaoServidor(nome);
       const cargo = CARGOS_SERVIDOR[nome];
-      return cargo ? (nome + ' (' + cargo + ')') : String(nome);
+      return cargo ? (base + ' (' + cargo + ')') : String(base);
+    }
+
+    function rotuloEquipe(chefiaOuEquipe) {
+      if (!chefiaOuEquipe) return '';
+      const key = String(chefiaOuEquipe).replace(/^EQUIPE\s+/i, '');
+      return PROD_EQUIPES[key] ? ('EQUIPE ' + key) : String(chefiaOuEquipe);
+    }
+
+    function subdigitosDoServidor(servidor) {
+      return Object.keys(DB_DIGITOS).filter(d => DB_DIGITOS[d].servidor === servidor).sort();
+    }
+
+    function htmlBotaoPlanilhaEquipe(chefia) {
+      return '<button type="button" onclick="baixarPlanilhaEquipe(\'' + chefia + '\', event)" class="shrink-0 inline-flex items-center justify-center text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm" title="Baixar planilha da equipe"><i class="ph-bold ph-file-xls text-base"></i></button>';
     }
 
     function htmlNomeServidor(nome) {
       const cargo = CARGOS_SERVIDOR[nome];
-      let html = escapeHtml(nome || '');
+      let html = escapeHtml(nomeExibicaoServidor(nome));
       if (cargo) {
         html += ' <span class="ml-1 inline-flex align-middle px-1.5 py-0.5 text-[9px] uppercase font-bold tracking-wide bg-amber-500/15 text-amber-400 border border-amber-500/20 rounded">' + escapeHtml(cargo) + '</span>';
       }
@@ -2283,7 +2322,8 @@
                   <i class="ph-bold ph-caret-down text-slate-500 chevron transition-transform duration-200 ml-2 text-xs"></i>
                 </div>
               </button>
-              ${!isZero ? `<button onclick="exportarProcessosServidor('${servidor}', event)" class="shrink-0 ml-1 text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm flex items-center gap-1" title="Baixar Planilha de ${servidor} (Excel/Calc)"><i class="ph-bold ph-file-xls text-sm"></i></button>` : ''}
+              ${CARGOS_SERVIDOR[servidor] ? htmlBotaoPlanilhaEquipe(servidor) : ''}
+              ${!isZero ? `<button type="button" onclick="exportarProcessosServidor('${servidor}', event)" class="shrink-0 ml-1 text-emerald-400 hover:text-emerald-300 p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 rounded-md border border-emerald-500/20 transition-all shadow-sm flex items-center gap-1" title="Baixar Planilha de ${escapeHtml(rotuloServidor(servidor))} (Excel/Calc)"><i class="ph-bold ph-file-xls text-sm"></i></button>` : ''}
             </div>
             <div class="hidden bg-slate-950 overflow-x-auto custom-scrollbar max-h-48">
               ${isZero ? '<p class="p-4 text-xs text-slate-500 italic text-center">Nenhum processo.</p>' : `
@@ -2305,12 +2345,11 @@
 
         teamDiv.innerHTML = `
           <div class="bg-slate-950 border-b border-slate-800 p-4 flex justify-between items-center text-white shrink-0 flex-wrap gap-2">
-            <div class="flex items-center gap-2">
-              <strong class="font-bold text-sm tracking-wide">EQUIPE ${chefia}</strong>
-              <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 p-1 rounded-lg ml-2">
-                <button onclick="exportTeamData('${chefia}', 'xlsx')" title="Exportar planilha completa da equipe" class="bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded text-[10px] font-bold transition-colors">.XLSX</button>
-                <button onclick="exportTeamData('${chefia}', 'csv')" title="Exportar tabela CSV da equipe" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2 py-0.5 rounded text-[10px] font-bold transition-colors">.CSV</button>
-              </div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <strong class="font-bold text-sm tracking-wide">${rotuloEquipe(chefia)}</strong>
+              <span class="text-[10px] uppercase tracking-wide text-amber-400/90 font-semibold">${escapeHtml(rotuloServidor(chefia))}</span>
+              ${htmlBotaoPlanilhaEquipe(chefia)}
+              <button type="button" onclick="exportTeamData('${chefia}', 'csv')" title="Exportar tabela CSV da equipe" class="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2 py-0.5 rounded text-[10px] font-bold transition-colors">.CSV</button>
             </div>
             <div class="flex items-center">
               <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded-lg text-xs font-bold">${teamTotal} processos</span>
@@ -2566,7 +2605,7 @@
           alertas.push({ tipo: 'atencao', icon: 'ph-scales', titulo: 'Sobrecarga de Servidor Detectada',
               desc: `<strong>${escapeHtml(rotuloServidor(ovServer))}</strong> possui acervo (${servStats[ovServer].total} proc.) significativamente acima da média da unidade (~${Math.round(avg)}).` });
           
-          recoms.push(`<strong>Reequilíbrio de Carga:</strong> Sugere-se redistribuir processos de <strong>${escapeHtml(rotuloServidor(ovServer))}</strong> para outros servidores da equipe unificada que apresentem capacidade ociosa.`);
+          recoms.push(`<strong>Reequilíbrio de Carga:</strong> Sugere-se redistribuir processos de <strong>${escapeHtml(rotuloServidor(ovServer))}</strong> para outros servidores das duas equipes que apresentem capacidade ociosa.`);
        }
 
        const metaRisk = data.filter(p => p.tempo >= 90);
@@ -2683,8 +2722,8 @@
       const rows = sProcs.map(p => [
         p.processo, 
         p.digito, 
-        p.servidor, 
-        p.chefia, 
+        nomeExibicaoServidor(p.servidor), 
+        rotuloEquipe(p.chefia), 
         p.tempo, 
         p.tarefa
       ]);
@@ -2713,12 +2752,127 @@
       showToast(`Planilha baixada para ${rotuloServidor(servidor)}!`, "success");
     };
 
+    function nomeAbaExcel(nome, usados) {
+      let base = String(nomeExibicaoServidor(nome) || nome || 'Servidor').replace(/[\\/*?:\[\]]/g, '').trim().substring(0, 31);
+      if (!base) base = 'Servidor';
+      let finalName = base;
+      let i = 2;
+      while (usados.has(finalName.toLowerCase())) {
+        const suf = ' ' + i;
+        finalName = base.substring(0, Math.max(1, 31 - suf.length)) + suf;
+        i++;
+      }
+      usados.add(finalName.toLowerCase());
+      return finalName;
+    }
+
+    function linhasProcessoServidor(servidor, equipeLabel) {
+      const headers = ["Processo", "Subdígito", "Servidor", "Equipe", "Tempo (Dias)", "Data último movimento", "Última Tarefa", "Status"];
+      const procs = (processedData || []).filter(p => p.servidor === servidor);
+      const rows = procs.map(p => {
+        const cacheEntry = (modalProcessesCache || []).find(c => c.processo === p.processo);
+        const status = cacheEntry ? cacheEntry.statusTipo : 'DISTRIBUIDO';
+        return [
+          p.processo,
+          p.digito,
+          nomeExibicaoServidor(p.servidor),
+          equipeLabel,
+          p.tempo,
+          p.dataUltimoMovimento || p.tempoStr || '',
+          p.tarefa || '',
+          status
+        ];
+      });
+      return { headers, rows, total: procs.length };
+    }
+
+    function statsProdutividadeServidor(servidor) {
+      const procs = (processedData || []).filter(p => p.servidor === servidor);
+      let cump = 0, pend = 0, soma = 0, nPend = 0;
+      procs.forEach(p => {
+        const cacheEntry = (modalProcessesCache || []).find(c => c.processo === p.processo);
+        if (cacheEntry && cacheEntry.isCumprido) {
+          cump++;
+        } else {
+          pend++;
+          soma += Number(p.tempo) || 0;
+          nPend++;
+        }
+      });
+      return {
+        total: procs.length,
+        cump,
+        pend,
+        media: nPend ? Math.round(soma / nPend) : ''
+      };
+    }
+
+    window.montarWorkbookEquipe = function(chefia) {
+      const key = String(chefia || '').replace(/^EQUIPE\s+/i, '');
+      const teamServers = PROD_EQUIPES[key];
+      if (!teamServers) return null;
+      const equipeLabel = rotuloEquipe(key);
+      const wb = XLSX.utils.book_new();
+
+      const resumoHeader = ["Servidor", "Função", "Equipe", "Subdígitos", "Qtd. Subdígitos", "Processos na sessão", "Cumpridos", "Pendentes", "Tempo médio (dias)"];
+      const resumoRows = teamServers.map(servidor => {
+        const digs = subdigitosDoServidor(servidor);
+        const st = statsProdutividadeServidor(servidor);
+        return [
+          nomeExibicaoServidor(servidor),
+          CARGOS_SERVIDOR[servidor] || '',
+          equipeLabel,
+          digs.join(', '),
+          digs.length,
+          st.total,
+          st.cump,
+          st.pend,
+          st.media
+        ];
+      });
+      const wsResumo = XLSX.utils.aoa_to_sheet([resumoHeader, ...resumoRows]);
+      wsResumo['!cols'] = [{wch: 22}, {wch: 16}, {wch: 16}, {wch: 36}, {wch: 16}, {wch: 20}, {wch: 12}, {wch: 12}, {wch: 20}];
+      XLSX.utils.book_append_sheet(wb, wsResumo, "Resumo");
+
+      const usados = new Set(["resumo"]);
+      teamServers.forEach(servidor => {
+        const digs = subdigitosDoServidor(servidor);
+        const { headers, rows } = linhasProcessoServidor(servidor, equipeLabel);
+        const meta = [
+          ["Servidor", nomeExibicaoServidor(servidor)],
+          ["Função", CARGOS_SERVIDOR[servidor] || ''],
+          ["Equipe", equipeLabel],
+          ["Subdígitos", digs.join(', ')],
+          [],
+          headers,
+          ...rows
+        ];
+        const ws = XLSX.utils.aoa_to_sheet(meta);
+        ws['!cols'] = [{wch: 28}, {wch: 12}, {wch: 22}, {wch: 16}, {wch: 14}, {wch: 22}, {wch: 45}, {wch: 18}];
+        XLSX.utils.book_append_sheet(wb, ws, nomeAbaExcel(servidor, usados));
+      });
+      return wb;
+    };
+
+    window.baixarPlanilhaEquipe = function(chefia, e) {
+      if (e) e.stopPropagation();
+      if (typeof XLSX === 'undefined') return showToast("Biblioteca Excel não carregada.", "error");
+      const key = String(chefia || '').replace(/^EQUIPE\s+/i, '');
+      if (!PROD_EQUIPES[key]) return showToast("Equipe não localizada.", "error");
+      const wb = montarWorkbookEquipe(key);
+      const dataHoje = formatDateID(new Date()) || new Date().toISOString().split('T')[0];
+      const nomeArq = 'Equipe_' + key.replace(/\s+/g, '_') + '_' + dataHoje + '.xlsx';
+      XLSX.writeFile(wb, nomeArq);
+      showToast('Planilha da ' + rotuloEquipe(key) + ' baixada!', 'success');
+    };
+
     window.exportTeamData = function(chefia, format) {
-      const teamServers = PROD_EQUIPES[chefia];
+      if (format !== 'csv') return baixarPlanilhaEquipe(chefia);
+      const teamServers = PROD_EQUIPES[chefia] || PROD_EQUIPES[String(chefia || '').replace(/^EQUIPE\s+/i, '')];
       if (!teamServers) return showToast("Equipe não localizada.", "error");
 
       const teamProcesses = processedData.filter(p => teamServers.includes(p.servidor));
-      if (teamProcesses.length === 0) return showToast(`Não há processos para a Equipe ${chefia}.`, "warning");
+      if (teamProcesses.length === 0) return showToast(`Não há processos para a ${rotuloEquipe(chefia)}.`, "warning");
 
       const headers = ["Processo", "Subdígito", "Servidor", "Equipe", "Tempo (Dias)", "Última Tarefa", "Status (Comparação)"];
       const colsConfig = [{wch: 25}, {wch: 10}, {wch: 20}, {wch: 20}, {wch: 15}, {wch: 45}, {wch: 20}];
@@ -2734,8 +2888,8 @@
         return [
           p.processo, 
           p.digito, 
-          p.servidor, 
-          p.chefia, 
+          nomeExibicaoServidor(p.servidor), 
+          rotuloEquipe(p.chefia), 
           p.tempo, 
           p.tarefa,
           status
